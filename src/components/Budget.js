@@ -20,15 +20,16 @@ const Budget = () => {
     };
     
       const handleDecrement = () => {
+        if(budget <= totalExpenses) {
+            alert("The Budget cannot be less than Expense total");
+            setUpperLimit("");
+            
+      }
+      if(budget > totalExpenses){
 
-        if (budget>0){
         setBudget(budget - 10);
+    
     }
-    if(budget < totalExpenses) {
-        alert("The Budget cannot be less than Expense total");
-        //setUpperLimit("");
-        
-  }
       };
      
     
@@ -53,4 +54,6 @@ const Budget = () => {
     );
 };
 export default Budget;
+
+
 
