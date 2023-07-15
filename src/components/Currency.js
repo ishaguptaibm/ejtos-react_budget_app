@@ -5,16 +5,19 @@ const Currency = () => {
     const [name, setName] = useState('');
     return (
         <div >
-<select style={{ backgroundColor: 'green', color: 'white',hover:'grey' }} id="inputGroupSelect01" value={name} onChange={(event) => setName(event.target.value)}>
-<option defaultValue> Choose...</option>
-                        <option value="Currency: $ Dollar" name="Currency: $ Dollar"> $ Dollar</option>
+            <label style={{ backgroundColor: 'green', color: 'white'}} htmlFor="dropdown">Currency : (
+<select id="dropdown" style={{ backgroundColor: 'green', color: 'white',hover:'grey' }} value={name} onChange={(event) => setName(event.target.value)}>
+                        
+                        <option value="$ Dollar" name="$ Dollar"> $ Dollar</option>
                 <option value="£ Pound" name="£ Pound">£ Pound</option>
                 <option value="€ Euro" name="€ Euro">€ Euro</option>
                 <option value="₹ Ruppee" name="₹ Ruppee">₹ Ruppee</option>
                 
-                  </select>       
-                 
+                  </select>  
+            )     
+                  </label>
                    </div>
     );
 };
 export default Currency;
+
